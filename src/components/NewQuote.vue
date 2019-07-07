@@ -1,12 +1,16 @@
 <template>
     <div>
-        <textarea class="mt-3 mb-4" v-model="newText"></textarea>
-        <button class="btn btn-success" @click="addNew">Add New</button>
+        <form>
+            <label>New quote</label>
+            <textarea class="form-control mt-3 mb-4" v-model="newText"></textarea>
+            <button @click.prevent="addNew" class="btn btn-success">Add New</button>
+        </form>
     </div>
 </template>
 
 <script>
     import {DataStore} from '../main';
+
     export default {
         name: "NewQuote",
         data() {

@@ -1,8 +1,13 @@
 <template>
-    <div @click="removeQuote">id: {{id}}
-        <p>
-            <slot></slot>
-        </p>
+    <div @click="removeQuote" class="card my-card">
+        <div class="card-body">
+            <h5 class="card-title">
+                id: {{id}}
+            </h5>
+            <div class="card-text">
+                <slot></slot>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -23,9 +28,13 @@
 </script>
 
 <style scoped>
-    div {
-        border: solid 1px #42b983;
-        margin: 8px;
-        padding: 5px;
+    .my-card {
+        width: 14rem;
+        display: inline-block;
+        margin: 4px;
+        cursor: pointer;
+    }
+    .my-card:hover {
+        background-color: lightpink;
     }
 </style>

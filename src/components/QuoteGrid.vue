@@ -1,10 +1,10 @@
 <template>
     <div class="grid">
-        <ul>
-            <li v-for="quote in quotes" :key="quote.id">
-                <single-quote :id="quote.id">{{quote.text}}</single-quote>
-            </li>
-        </ul>
+        <single-quote :id="quote.id"
+                      :key="quote.id"
+                      v-for="quote in quotes">{{quote.text}}
+        </single-quote>
+<!--        @click.native="deleteQuote(index)" -->
     </div>
 </template>
 
@@ -19,9 +19,7 @@
                 quotes: DataStore.quotes,
             }
         },
-        methods: {
-
-        },
+        methods: {},
         components: {
             SingleQuote,
         },
@@ -36,7 +34,5 @@
         padding: 5px;
     }
 
-    li {
-        display: inline-block;
-    }
+
 </style>

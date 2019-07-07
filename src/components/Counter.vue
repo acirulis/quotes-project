@@ -1,6 +1,6 @@
 <template>
     <div class="mt-3 mb-3">
-        <h2>Quotes added</h2>
+        <h3>Quotes added</h3>
         <div class="progress">
             <div :aria-valuenow="counterWidth" :style="{width: counterWidth +'%'}" aria-valuemax="100" aria-valuemin="0"
                  class="progress-bar"
